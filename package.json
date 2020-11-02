@@ -4,7 +4,8 @@
   "description": "Interactive data visualisation about the car in the city",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "smiley": "parcel exercises/smiley/smiley.html"
+
   },
   "repository": {
     "type": "git",
