@@ -7,7 +7,7 @@ The goal of this course is to create a data visualisation (using d3) where you u
 
 ### Link to live example
 
-[Click here to see the data visualisation]()
+[Click here to see the data visualisation](https://max-hauser.github.io/frontend-data/)
 
 ### image of project
 
