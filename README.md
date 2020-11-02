@@ -21,6 +21,14 @@ Here comes the concept..
 
 Here it's explained how the data is dealth with
 
+### Install guide
+
+With this project I used [parcel](https://parceljs.org/getting_started.html) as a server.
+
+1. ```npm install -g parcel-bundler```
+2. ```npm init -y```
+3. ```parcel index.html```
+
 ### plagiarism and acknowledgements
 
 Resouces and acknowledgements
