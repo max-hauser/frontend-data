@@ -4,7 +4,8 @@
   "description": "Interactive data visualisation about the car in the city",
   "main": "index.js",
   "scripts": {
-    "smiley": "parcel exercises/smiley/smiley.html"
+    "smiley": "parcel exercises/smiley/smiley.html",
+    "barchart": "parcel exercises/barchart/barchart.html"
 
   },
   "repository": {
