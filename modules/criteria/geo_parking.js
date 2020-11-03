@@ -15,7 +15,6 @@ async function geoParking(areaIds) {
 
   // get lat, long
   const cordinates = cityData.map(area => area.location);
-
   return cordinates;
 } 
 

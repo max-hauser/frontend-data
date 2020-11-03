@@ -12,6 +12,7 @@ import cashOnly from "./cash_only.js";
 import exitParking from "./exit_parking.js";
 import maxVehicleHeight from "./max_vehicle_height.js";
 import getLocations from "./get_location.js";
+import renderMap from "./kaart.js";
 
 async function init() {
 
@@ -37,7 +38,9 @@ async function init() {
     }
   }).filter(area => area != null);
 
-  getLocations(canditAreas);
+  const locations = getLocations(canditAreas);
+
+  renderMap(locations);
 }
 
 export default init;
