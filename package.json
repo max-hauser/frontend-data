@@ -6,7 +6,6 @@
   "scripts": {
     "smiley": "parcel exercises/smiley/smiley.html",
     "barchart": "parcel exercises/barchart/barchart.html"
-
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/max-hauser/frontend-data#readme",
   "dependencies": {
-    "d3": "^6.2.0"
+    "d3": "^6.2.0",
+    "regenerator-runtime": "^0.13.7"
   }
 }
