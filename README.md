@@ -11,7 +11,7 @@ The goal of this course is to create a data visualisation (using d3) where you u
 
 ### image of project
 
-_insert image.._
+![statische-kaart](https://github.com/max-hauser/frontend-data/blob/main/media/statische-kaart.png)
 
 ### Concept
 
@@ -23,11 +23,7 @@ Here it's explained how the data is dealth with
 
 ### Install guide
 
-With this project I used [parcel](https://parceljs.org/getting_started.html) as a server.
-
-1. ```npm install -g parcel-bundler```
-2. ```npm init -y```
-3. ```parcel index.html```
+You can run it with the vs code extention called 'live server'
 
 ### plagiarism and acknowledgements
 
