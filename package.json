@@ -7,6 +7,7 @@
     "smiley": "parcel exercises/smiley/smiley.html",
     "barchart": "parcel exercises/barchart/barchart.html"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/max-hauser/frontend-data.git"
