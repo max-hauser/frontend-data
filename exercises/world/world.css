@@ -1,0 +1,22 @@
+body{
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.sphere{
+  fill: #4242e4;
+}
+
+.countries{
+  fill: lightgreen;
+  stroke: black;
+  stroke-width: 0.4px;
+}
+
+.countries:hover{
+  fill: red;
+}

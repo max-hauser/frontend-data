@@ -7,7 +7,6 @@
     "smiley": "parcel exercises/smiley/smiley.html",
     "barchart": "parcel exercises/barchart/barchart.html"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/max-hauser/frontend-data.git"
@@ -21,6 +20,7 @@
   "homepage": "https://github.com/max-hauser/frontend-data#readme",
   "dependencies": {
     "d3": "^6.2.0",
-    "regenerator-runtime": "^0.13.7"
+    "regenerator-runtime": "^0.13.7",
+    "topojson": "^3.0.2"
   }
 }
