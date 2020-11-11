@@ -1,0 +1,21 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e8e8e8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+svg{
+  background-color: hsl(0, 74%, 37%);
+  border: 10px solid #000;
+}
+
+form{
+  background-color: #000;
+  padding: 15px;
+  display: inline-block;
+  color: #fff;
+}

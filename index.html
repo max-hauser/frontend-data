@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Kaart</title> 
-  <style>
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #faebd7;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    main{
-      padding: 15px;
-      background-color: #ffffff;
-      margin: 15px;
-      box-shadow: 0px 0px 0px 2px #000;
-    }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datavisualisation</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <main>
-    <h1>De kaart van Amsterdam</h1>
+    <main>
+    
+    <h2>Waar kun je het beste je getaway car verbergen?</h2>
+    <form action="" name="filter" id="filter">
+        <label for="betaalmethode">betaalmethode:</label>
+        <select name="betaalmethode" id="betaalmethode">
+            <option value="PIN">PIN</option>
+            <option value="CREDITCARD">CREDITCARD</option>
+            <option value="CASH">CASH</option>
+        </select>
 
-    <h3>Criteria</h3>
-    <ul>
-      <li>De garages kunnen worden betaald met cash-geld</li>
-      <li>De garages zijn hoog genoeg voor grote auto's</li>
-      <li>De garages zijn ten alle tijden te verlaten</li>
-    </ul>
-    <svg width="600" height="500"></svg>
+        <br><br>
 
-  </main>
-  <script src="https://d3js.org/d3.v4.js"></script>
-  <script src="scripts/main.js" type="module"></script>
+        <label for="altijdWegrijden">altijd weg kunnen rijden:</label>
+        <select name="altijdWegrijden" id="altijdWegrijden" disabled>
+            <option value=1>Ja</option>
+            <option value=0>Nee</option>
+        </select>
+
+        <br><br>
+
+        <label for="altijdOpen">Garage 24 uur beschikbaar:</label>
+        <select name="altijdOpen" id="altijdOpen" disabled>
+            <option value=1>Ja</option>
+            <option value=0>Nee</option>
+        </select>
+
+        <br><br>
+
+        <label for="capaciteit">Garage capaciteit</label>
+        <input type="number" name="capaciteit" id="capaciteit" min="1" max="3000" value="100">
+
+        <br><br>
+
+        <label for="maximaleVoertuigHoogte">maximale voertuighoogte</label>
+        <input type="number" name="maximaleVoertuigHoogte" id="maximaleVoertuigHoogte" min="1" max="300" value="100">
+        
+        <br><br>
+        
+        <label for="opladen">Elektrisch opladen:</label>
+        <select name="opladen" id="opladen" disabled>
+            <option value=0>nee</option>
+            <option value=1>Ja</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="zoeken" name="submit" id="submit">
+    </form>
+    </main>
+
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="scripts/main.js" type="module"></script>
 </body>
 </html>
