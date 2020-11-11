@@ -11,6 +11,8 @@ The goal of this course is to create a data visualisation (using d3) where you u
 
 ### image of project
 
+![final-kaart](https://github.com/max-hauser/frontend-data/blob/main/media/final.png)
+
 ![statische-kaart](https://github.com/max-hauser/frontend-data/blob/main/media/statische-kaart.png)
 
 ![politiebureaus-kaart](https://github.com/max-hauser/frontend-data/blob/main/media/politiebureaus-amsterdam.png)
