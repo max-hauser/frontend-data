@@ -22,10 +22,9 @@ subquestions/criteria:
   * In this dataset I used the ```exitpossibleallday``` and ```openallyear``` data.
   
 ### Other datasets
-* https://opendata.rdw.nl/resource/2uc2-nnv3.json
 * https://opendata.rdw.nl/resource/t5pc-eb34.json
 
-These two datasets were used to determine the coordinates and location of the garages.
+This datasets is used to determine the coordinates and location of the garages.
 
 ### Link to datavisualisation
 
