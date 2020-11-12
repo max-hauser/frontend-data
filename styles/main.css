@@ -30,6 +30,7 @@ form{
 }
 
 svg{
+    /* gestreepte achtergrond bron: https://css-tricks.com/stripes-css/ */
     background: repeating-linear-gradient(
     45deg,
     #dddddd,

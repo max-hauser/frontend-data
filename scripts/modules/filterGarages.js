@@ -4,6 +4,11 @@ import updateMap from "./updateMap.js"
 
 
 async function filterGarages(settings) {
+
+    // This function gets the settings which holds the filter results of the user
+    // Then it gets all the garages and filters it based on the filter results of the user
+    // Finally it sends the filtered garages-data to the updateMap function
+
     const alleGarages = await parkeerData();
 
     const resultaat = alleGarages.filter(garage =>

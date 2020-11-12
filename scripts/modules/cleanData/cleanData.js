@@ -1,15 +1,11 @@
+/*
 
-import { specificaties, locaties, gebiedsbeheer, openingstijden, betaalmethodes } from "../datasets.js";
+This file contains all the functions that filter out the Amsterdam data from all the other cities.
 
-async function stadscode(stadnaam) {
-    return await fetch(gebiedsbeheer)
-        .then(response => response.json())
-        .then(data => {
-            const stad = data.filter(stad => stad.areamanagerdesc == stadnaam);
-            const stadscode = parseInt(stad.map(code => code.areamanagerid));
-            return stadscode;
-        });
-}
+*/
+
+
+import { specificaties, locaties, openingstijden, betaalmethodes } from "../datasets.js";
 
 async function locatieGarages() {
     return await fetch(locaties)

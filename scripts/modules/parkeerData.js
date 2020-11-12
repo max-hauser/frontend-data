@@ -1,6 +1,16 @@
 import { locatieGarages, garageSpecs, openingstijdenGarages, betaalmethodeGarages } from "./cleanData/cleanData.js";
 
 async function parkeerData() {
+
+    /*
+    
+    This function first awaits the data which holds all the information of the garages in Amsterdam.
+    Then it combines all the seperate information and makes them into garage objects.
+    Finally it filters out the objects which hold missing information.
+    
+    */
+
+
     const specificaties = await garageSpecs();
     const locaties = await locatieGarages();
     const openingstijden = await openingstijdenGarages();

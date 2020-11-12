@@ -1,7 +1,13 @@
+/*
 
+In this function the map is generated, and the garage data is put upon the map.
+
+
+*/
 
 async function updateMap(resultaat) {
 
+    // Here it's checked if there are any results, this either shows the no results message or not.
     if(resultaat != null && Object.keys(resultaat).length == 0) {
         document.querySelector("#noresults").classList.add("show");
     }else{
@@ -23,10 +29,9 @@ async function updateMap(resultaat) {
     const g = svg.append('g');
 
     if (mapExists.empty()) {
-
+        // Here it's checked if the map already exists.
         d3.json(amsterdam, function (data) {
 
-            // Draw the map
             g.append("g")
                 .selectAll("path")
                 .data(data.features)
@@ -51,7 +56,7 @@ async function updateMap(resultaat) {
     render()
 
     function render() {
-
+        // This function handles the datapoints that will appear on the map.
         const mapPunten = [];
 
         resultaat.forEach((res) => {
@@ -78,6 +83,7 @@ async function updateMap(resultaat) {
             .text(tooltip)
 
         function tooltip(d) {
+            // This function creates the tooltip that shows up if you hover over a garage
             const garageInfo = resultaat.filter(data => data.locaties.coordinaten == d);
             const betaalmethode = garageInfo[0].betaalmethode;
             const beschrijving = garageInfo[0].locaties.beschrijving;

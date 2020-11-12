@@ -1,6 +1,15 @@
 import filterGarages from "./modules/filterGarages.js";
 
+/*
+
+This is the main file. From here the whole process is started.
+
+*/
+
 filter.addEventListener('submit', (event)=>{
+
+    // This function gets the information of the filter and passes it on to the filterGarages function.
+
     event.preventDefault();
     const betaalmethode = event.target[0].value;
     const altijdWegrijden = event.target[1].value;
