@@ -48,3 +48,12 @@ svg{
     padding: 10px 20px;
     border-radius: 0;
 }
+
+#noresults{
+    padding: 15px 5px;
+    display: none;
+}
+
+#noresults.show{
+    display: block;
+}

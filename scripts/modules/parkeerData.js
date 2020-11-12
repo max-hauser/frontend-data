@@ -11,6 +11,7 @@ async function parkeerData() {
     const keys = [];
 
     parkeerInformatie.forEach((dataset) => {
+
         const key = Object.keys(dataset);
 
         if (!keys.includes(key)) {
@@ -27,6 +28,10 @@ async function parkeerData() {
 
     for (let i = 0; i < allKeys.length; i++) {
 
+        if(betaalmethode[allKeys[i]] == null){
+            betaalmethode[allKeys[i]] = "363_DEFAULT";
+        }
+
         output.push(
             {
                 "id": allKeys[i],
@@ -42,6 +47,7 @@ async function parkeerData() {
     const result = [];
 
     output.forEach((garage) => {
+
         if (Object.values(garage).indexOf(undefined) > -1 == false) {
             result.push(garage);
         }

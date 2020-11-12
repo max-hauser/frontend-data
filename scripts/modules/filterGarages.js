@@ -12,8 +12,9 @@ async function filterGarages(settings) {
         garage.openingstijden.altijdOpen == settings.altijdOpen &&
         garage.specificaties.capaciteit >= settings.capaciteit &&
         garage.specificaties.maximaleVoertuigHoogte >= settings.maximaleVoertuigHoogte &&
-        garage.specificaties.opladen == settings.opladen
+        garage.specificaties.opladen >= settings.opladen
     )
+
 
     updateMap(resultaat);
 }

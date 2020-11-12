@@ -12,11 +12,10 @@ async function stadscode(stadnaam) {
 }
 
 async function locatieGarages() {
-    const stadcode = await stadscode("Amsterdam");
     return await fetch(locaties)
         .then(response => response.json())
         .then(data => {
-            const parkeergarage = data.filter(locatie => locatie.areamanagerid == stadcode);
+            const parkeergarage = data.filter(item => item.areaid.startsWith("363"));
             const beschrijving = parkeergarage.map(garage => garage.areadesc)
             const coordinaten = parkeergarage.map(garage => garage.location)
             const id = parkeergarage.map(garage => garage.areaid);
@@ -28,11 +27,10 @@ async function locatieGarages() {
 }
 
 async function garageSpecs() {
-    const stadcode = await stadscode("Amsterdam");
     return await fetch(specificaties)
         .then(response => response.json())
         .then(data => {
-            const parkeergarage = data.filter(locatie => locatie.areamanagerid == stadcode);
+            const parkeergarage = data.filter(item => item.areaid.startsWith("363"));
             const id = parkeergarage.map(garage => garage.areaid);
             const capaciteit = parkeergarage.map(garage => parseInt(garage.capacity));
             const opladen = parkeergarage.map(garage => parseInt(garage.chargingpointcapacity));
@@ -49,11 +47,10 @@ async function garageSpecs() {
 }
 
 async function openingstijdenGarages() {
-    const stadcode = await stadscode("Amsterdam");
     return await fetch(openingstijden)
         .then(response => response.json())
         .then(data => {
-            const parkeergarage = data.filter(locatie => locatie.areamanagerid == stadcode);
+            const parkeergarage = data.filter(item => item.areaid.startsWith("363"));
             const id = parkeergarage.map(garage => garage.areaid);
             const altijdWegrijden = parkeergarage.map(garage => parseInt(garage.exitpossibleallday));
             const altijdOpen = parkeergarage.map(garage => parseInt(garage.openallyear));
@@ -65,11 +62,10 @@ async function openingstijdenGarages() {
 }
 
 async function betaalmethodeGarages() {
-    const stadcode = await stadscode("Amsterdam");
     return await fetch(betaalmethodes)
         .then(response => response.json())
         .then(data => {
-            const parkeergarage = data.filter(locatie => locatie.areamanagerid == stadcode);
+            const parkeergarage = data.filter(item => item.areaid.startsWith("363"));
             const id = parkeergarage.map(garage => garage.areaid);
             const betaalmethode = parkeergarage.map(garage => garage.paymentmethod);
             let garageInformatie = {};

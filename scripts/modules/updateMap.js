@@ -2,6 +2,12 @@
 
 async function updateMap(resultaat) {
 
+    if(resultaat != null && Object.keys(resultaat).length == 0) {
+        document.querySelector("#noresults").classList.add("show");
+    }else{
+        document.querySelector("#noresults").classList.remove("show");  
+    }
+
     const amsterdam = "https://maps.amsterdam.nl/open_geodata/geojson.php?KAARTLAAG=GEBIED_STADSDELEN_EXWATER&THEMA=gebiedsindeling";
 
     var svg = d3.select("svg"),
@@ -9,7 +15,7 @@ async function updateMap(resultaat) {
         height = 500
 
     var projection = d3.geoMercator()
-        .center([4.80, 52.4])
+        .center([4.84, 52.39])
         .scale(150000)
         .translate([width / 2, height / 2])
 
@@ -34,7 +40,9 @@ async function updateMap(resultaat) {
                 .call(d3.zoom().on('zoom', () => {
                     g.attr("transform", d3.event.transform);
                 }))
-            updateMap(resultaat)
+            if(resultaat != null){
+                updateMap(resultaat)
+            }
         })
 
         return;
@@ -80,5 +88,7 @@ async function updateMap(resultaat) {
         }
     }
 }
+
+updateMap(null);
 
 export default updateMap;
