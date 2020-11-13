@@ -6,4 +6,4 @@ const openingstijden = "https://opendata.rdw.nl/resource/figd-gux7.json";
 const betaalmethodes = "https://opendata.rdw.nl/resource/r3rs-ibz5.json";
 
 
-export {specificaties, locaties, gebiedsbeheer, openingstijden, betaalmethodes};
+export {specificaties, locaties, openingstijden, betaalmethodes};
