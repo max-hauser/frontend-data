@@ -48,11 +48,11 @@ async function openingstijdenGarages() {
         .then(data => {
             const parkeergarage = data.filter(item => item.areaid.startsWith("363"));
             const id = parkeergarage.map(garage => garage.areaid);
-            const altijdWegrijden = parkeergarage.map(garage => parseInt(garage.exitpossibleallday));
-            const altijdOpen = parkeergarage.map(garage => parseInt(garage.openallyear));
+            const openingsTijd = parkeergarage.map(garage => parseInt(garage.enterfrom));
+            const sluitingsTijd = parkeergarage.map(garage => parseInt(garage.enteruntil));
             let garageInformatie = {};
 
-            id.forEach((garageNaam, index) => garageInformatie[garageNaam] = { "altijdWegrijden": altijdWegrijden[index], "altijdOpen": altijdOpen[index] });
+            id.forEach((garageNaam, index) => garageInformatie[garageNaam] = { "openingstijd": openingsTijd[index], "sluitingstijd": sluitingsTijd[index] });
             return garageInformatie;
         })
 }
